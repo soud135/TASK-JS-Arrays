@@ -10,8 +10,14 @@
  */
 function isArrayLengthOdd(numbers) {
   // Your code here
+  if(numbers.length%2==0){
+    return false
+  }
+  else{
+    return true
+  }
 }
-
+let x =isArrayLengthOdd([1,2,3,4])
 /**
  * isArrayLengthEven(numbers):
  * - receives array `numbers`
@@ -23,8 +29,17 @@ function isArrayLengthOdd(numbers) {
  * isArrayLengthEven([1, 2, 3, 4]) -> true
  */
 function isArrayLengthEven(numbers) {
-  // Your code here
+
+  if(numbers.length%2==0){
+    return true
+  }
+  else{
+    return false
+  }
 }
+
+let y =isArrayLengthEven([1,2,3,4])
+console.log(y)
 
 /**
  * addLailaToArray(instructors):
@@ -35,9 +50,11 @@ function isArrayLengthEven(numbers) {
  * addLailaToArray(["Mshary", "Hasan"]) -> ["Mshary", "Hasan", "Laila"]
  */
 function addLailaToArray(instructors) {
-  // Your code here
+  instructors.push("laila")
+  console.log(instructors)
+  
 }
-
+addLailaToArray(["Mshary", "Hasan"])
 /**
  * eliminateTeam(teams):
  * - receives array `teams`
@@ -47,8 +64,10 @@ function addLailaToArray(instructors) {
  * eliminateTeam(["Brazil", "Germany", "Italy"]) -> "Italy"
  */
 function eliminateTeam(teams) {
-  // Your code here
+  const removedteam = teams.pop()
+  return removedteam
 }
+console.log(eliminateTeam(["Brazil", "Germany", "Italy"]))
 
 /**
  * secondHalfOfArrayIfItIsEven(fruits):
